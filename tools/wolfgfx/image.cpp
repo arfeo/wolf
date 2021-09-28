@@ -9,6 +9,10 @@
 #include <stdio.h>
 #include <string.h>
 
+#if _MSC_VER < 1600
+    #include "nullptr_emul.h"
+#endif
+
 Image::Image()
 {
     buf = nullptr;

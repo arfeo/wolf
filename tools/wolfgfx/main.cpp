@@ -13,6 +13,9 @@
 int convert_gfx(const char* aFilename, const char* aSymbol, bool aAlpha, bool aCompress);
 int convert_maps(const char* aFilename, const char* aSymbol);
 
+#if _MSC_VER < 1600
+    #include "nullptr_emul.h"
+#endif
 
 int print_usage()
 {
@@ -75,6 +78,7 @@ int main(int argc, const char * argv[])
 int convert_gfx(const char* aFilename, const char* aSymbol, bool aAlpha, bool aCompress)
 {
     FILE* f = fopen(aFilename, "r");
+
     if (!f)
     {
         printf("Failed to open %s", aFilename);
