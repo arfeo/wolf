@@ -359,7 +359,7 @@ title_menu2:
 ; Data for legal screen
 .INCLUDE "gfx/legal.s"
 legal_pal_data:
-.db 20,  0,  0
+.db 0,  0,  0
 .db 13,  0,  0
 .db  7,  0,  0
 .db 25, 25, 25
@@ -367,15 +367,13 @@ legal_pal_data:
 ; Data for title screen
 .INCLUDE "gfx/title.s"
 title_pal_data:
-.db 20,  0,  0
+.db 0,  0,  0
 .db 13,  0,  0
-.db  7,  0,  0
+.db  20,  15,  0
 .db 25, 25, 25
 
-.db 20,  0,  0
-.db 20,  0,  0
-.db 20,  0,  0
+.db 0,  0,  0
+.db 0,  0,  0
+.db 0,  0,  0
 .db 31, 31, 31
 .ENDS
-
-
