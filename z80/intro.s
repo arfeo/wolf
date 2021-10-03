@@ -146,6 +146,19 @@ title:
     call    sys_wait_vbl
     ld      a, 1
     ldh     (R_VBK), a
+    ld      hl, $99A4
+    ldi     (hl), a
+    ldi     (hl), a
+    ldi     (hl), a
+    ldi     (hl), a
+    ldi     (hl), a
+    ldi     (hl), a
+    ldi     (hl), a
+    ldi     (hl), a
+    ldi     (hl), a
+    ldi     (hl), a
+    ldi     (hl), a
+    ldi     (hl), a
     ld      hl, $99C4
     ldi     (hl), a
     ldi     (hl), a
@@ -173,6 +186,8 @@ title:
     ldi     (hl), a
     ldi     (hl), a
     ld      a, %00100001
+    ld      hl, $99AE
+    ld      (hl), a
     ld      hl, $99CE
     ld      (hl), a
     ld      hl, $99EE
@@ -207,7 +222,7 @@ title:
 +   ld      a, (g_joypad_trigger)
     and     %00000001
     jr      z, -
- 
+
     ld      a, (mm_ypos)
     and     %00000001
     jp      nz, title_to_password_screen
@@ -253,7 +268,7 @@ title:
     ret
 
 title_print_menu:
-    ld      hl, $99C6
+    ld      hl, $99A6
     ld      de, title_menu1
     ld      b, 8
 -   ldh     a, (R_STAT)
@@ -264,7 +279,7 @@ title_print_menu:
     inc     de
     dec     b
     jr      nz, -
-    ld      hl, $99E6
+    ld      hl, $99C6
     ld      de, title_menu2
     ld      b, 8
 -   ldh     a, (R_STAT)
@@ -275,11 +290,23 @@ title_print_menu:
     inc     de
     dec     b
     jr      nz, -
+    ld      hl, $99E6
+    ;ld      de, title_menu3
+    ;ld      b, 8
+;-   ldh     a, (R_STAT)
+    ;and     $02
+    ;jr      nz, -
+    ;ld      a, (de)
+    ;ldi     (hl), a
+    ;inc     de
+    ;dec     b
+    ;jr      nz, -
+
     ret
 
 title_print_cursor:
     ld      b, a
-    ld      hl, $99C5
+    ld      hl, $99A5
     ld      a, (mm_ypos)
     sla     a
     sla     a
@@ -351,6 +378,8 @@ title_menu1:
 .DB $68, $5F, $71, $00, $61, $5B, $67, $5F
 title_menu2:
 .DB $5D, $69, $68, $6E, $63, $68, $6F, $5F
+title_menu3:
+.DB $69, $6A, $6E, $63, $69, $68, $6D
 .ENDS
 
 
