@@ -26,9 +26,9 @@ mm_ypos      DS 1
 .ORG $200
 .SECTION "Code_Intro" SEMIFREE
 
-;»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 ; Legal screen
-;»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 intro:
     ; copy legal screen chr & map
     ld      a, :legal_tile_data
@@ -76,9 +76,9 @@ intro:
     ret
 
 
-;»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 ; Title screen
-;»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»
+;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 title:
     xor     a
     ld      (cheat_godmode), a
@@ -92,14 +92,6 @@ title:
     ; stop music and sound
     call    snd_stop_music
     call    snd_stop_fx
-
-    ; clear all palettes to black
-    ld      hl, PAL_BLACK
-    ld      bc, 8
-    call    gfx_pal_copy_bg
-    ld      hl, PAL_BLACK
-    ld      bc, 8
-    call    gfx_pal_copy_obj
 
     ; init screen and interrupts
     di
@@ -119,6 +111,30 @@ title:
     ld      hl, $9800
     ld      de, title_map_data
     call    gfx_map_copy_20x18
+
+    ; enable bg
+    ld      a, %10010001
+    ldh     (R_LCDC), a
+
+    ; fade in
+    xor     a
+-   push    af
+    ld      bc, 1
+    call    sys_delay
+    call    snd_update
+    ld      a, :title_pal_data
+    ld      ($2000), a
+    pop     af
+    ld      hl, PAL_BLACK
+    ld      de, title_pal_data
+    ld      bc, 2
+    push    af
+    call    gfx_pal_fade_bg
+    pop     af
+    inc     a
+    cp      129
+    jr      c, -
+
     ; copy font
     ld      a, :msg_chr
     ld      ($2000), a
@@ -167,25 +183,6 @@ title:
     ; start music
     ld      a, 0
     call    snd_play_music
-
-    ; fade in
-    xor     a
--   push    af
-    ld      bc, 1
-    call    sys_delay
-    call    snd_update
-    ld      a, :title_pal_data
-    ld      ($2000), a
-    pop     af
-    ld      hl, PAL_BLACK
-    ld      de, title_pal_data
-    ld      bc, 2
-    push    af
-    call    gfx_pal_fade_bg
-    pop     af
-    inc     a
-    cp      129
-    jr      c, -
 
     call    title_print_menu
     ld      a, $7C
@@ -370,10 +367,10 @@ legal_pal_data:
 ; Data for title screen
 .INCLUDE "gfx/title.s"
 title_pal_data:
-.db 31, 31, 31
-.db 25, 15, 15
 .db 20,  0,  0
-.db  0,  0,  0
+.db 13,  0,  0
+.db  7,  0,  0
+.db 25, 25, 25
 
 .db 20,  0,  0
 .db 20,  0,  0
