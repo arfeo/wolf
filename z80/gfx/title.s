@@ -19,7 +19,7 @@
 .EQU title_tile_map_height 	$12
 
 .EQU title_tile_data_size 	$500
-.EQU title_tile_count 		$0168
+.EQU title_tile_count 		$30
 
 ; ////////////////
 ; //            //

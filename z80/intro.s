@@ -102,11 +102,12 @@ title:
     ldh     (R_LCDC), a
 
     ; copy title screen chr & map
+    call    gfx_chr_clear
     ld      a, :title_tile_data
     ld      ($2000), a
     ld      hl, $8000
     ld      de, title_tile_data
-    ld      c, 127
+    ld      c, 48
     call    gfx_chr_copy
     ld      hl, $9800
     ld      de, title_map_data
