@@ -35,7 +35,7 @@ intro:
     ld      ($2000), a
     ld      hl, $8000
     ld      de, legal_tile_data
-    ld      c, 127
+    ld      c, 80
     call    gfx_chr_copy
     ld      hl, $9800
     ld      de, legal_map_data
@@ -74,7 +74,6 @@ intro:
     jr      nz, -
 
     ret
-
 
 ;»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»
 ; Title screen
@@ -143,6 +142,7 @@ title:
     ld      de, msg_chr
     ld      c, 48
     call    gfx_chr_copy
+
     ; prepare menu
     call    sys_wait_vbl
     ld      a, 1
@@ -374,7 +374,6 @@ title_to_password_screen:
     jp      z, title
     ret
 
-
 title_menu1:
 .DB $68, $5F, $71, $00, $61, $5B, $67, $5F
 title_menu2:
@@ -383,9 +382,9 @@ title_menu3:
 .DB $69, $6A, $6E, $63, $69, $68, $6D
 .ENDS
 
-
 .BANK 3 SLOT SLOT_ROM_BANKED
 .SECTION "intro_data" SEMIFREE
+
 ; Data for legal screen
 .INCLUDE "gfx/legal.s"
 legal_pal_data:
