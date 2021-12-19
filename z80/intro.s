@@ -209,6 +209,11 @@ title:
 +   call    snd_update
     call    sys_update_joypad
 
+    ; go to cheat menu
+    ld      a, (g_joypad_status)
+    and     %00000100
+    jp      nz, title_to_cheat_menu
+
     ld      a, (g_joypad_trigger)
     and     %11000000
     jr      z, +
@@ -227,11 +232,6 @@ title:
     ld      a, (mm_ypos)
     and     %00000001
     jp      nz, title_to_password_screen
-
-    ; go to cheat menu   
-    ld      a, (g_joypad_status)
-    and     %00000100
-    jp      nz, title_to_cheat_menu
 
     ; play sound effect
     call    snd_stop_music
