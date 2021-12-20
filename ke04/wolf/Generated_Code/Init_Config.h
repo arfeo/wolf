@@ -8,7 +8,7 @@
 **     Repository  : Kinetis
 **     Datasheet   : MKE04P80M48SF0RM, Rev. 1, May 2014
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2021-12-20, 02:33, # CodeGen: 0
+**     Date/Time   : 2021-12-20, 13:21, # CodeGen: 0
 **     Abstract    :
 **         This file collects Processor Expert components configuration 
 **         and interface files.
